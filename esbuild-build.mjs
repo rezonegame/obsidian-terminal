@@ -1,0 +1,1 @@
+import esbuild from 'esbuild'; try { await esbuild.build({ entryPoints: ['src/main.ts'], bundle: true, outfile: 'main.js', platform: 'node', external: ['obsidian'], format: 'cjs', loader: { '.ts': 'ts', '.md': 'text', '.py': 'text', '.html': 'text' } }); console.log('Build success'); } catch (e) { console.error(e); process.exit(1); }

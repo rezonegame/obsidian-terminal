@@ -2,7 +2,7 @@
   "commands": {
     "clear-terminal": "$t(generic.clear)$t(generic.terminal)",
     "close-terminal": "$t(generic.close)$t(generic.terminal)",
-    "find-in-terminal": "于$t(generic.terminal)$t(generic.find)",
+    "find-in-terminal": "在$t(generic.terminal)中$t(generic.find)",
     "focus-on-last-terminal": "$t(generic.focus)于上一个$t(generic.terminal)",
     "open-developer-console": "$t(generic.open)$t(generic.profile-types.developerConsole)",
     "open-terminal-default-profile": "$t(generic.open)$t(generic.terminal)：$t(settings.default-profile)",
@@ -10,9 +10,9 @@
     "open-documentation-donate": "$t(generic.open)$t(generic.documentations.donate)",
     "open-documentation-readme": "$t(generic.open)$t(generic.documentations.readme)",
     "open-terminal-": "$t(generic.open)$t(generic.terminal)：$t(generic.profile-types.{{type}})",
-    "open-terminal-current": "在$t(generic.terminal)$t(generic.open)$t(generic.current-directory)：$t(generic.profile-types.{{type}})",
-    "open-terminal-root": "在$t(generic.terminal)$t(generic.open)$t(generic.root-directory)：$t(generic.profile-types.{{type}})",
-    "toggle-focus-on-last-terminal": "$t(generic.toggle)$t(generic.focus)于上一个$t(generic.terminal)",
+    "open-terminal-current": "在当前目录$t(generic.open)$t(generic.terminal)：$t(generic.profile-types.{{type}})",
+    "open-terminal-root": "在根目录$t(generic.open)$t(generic.terminal)：$t(generic.profile-types.{{type}})",
+    "toggle-focus-on-last-terminal": "$t(generic.toggle)聚焦于上一个$t(generic.terminal)",
     "unfocus-terminal": "$t(generic.unfocus)$t(generic.terminal)"
   },
   "components": {
@@ -29,25 +29,25 @@
       "integrated": {
         "Python-executable": "$t(generic.Python)$t(generic.executable)",
         "Python-executable-check": "$t(generic.check)",
-        "Python-executable-checking": "$t(generic.check)中",
-        "Python-executable-description": "推荐{{version}}或更高版本。于$t(generic.platforms.unix)$t(generic.spawn)$t(generic.profile-types.integrated)$t(generic.terminal)所需要的。$t(generic.clear)$t(generic.text-field)以$t(generic.disable)$t(generic.Python)。",
+        "Python-executable-checking": "检查中",
+        "Python-executable-description": "推荐{{version}}或更高版本。在$t(generic.platforms.unix)上启动$t(generic.profile-types.integrated)$t(generic.terminal)需要此项。清除$t(generic.text-field)以$t(generic.disable)$t(generic.Python)。",
         "Python-executable-placeholder": "（已$t(generic.disable)）",
         "arguments": "$t(generic.argument)",
         "arguments-description": "$t(generic.list-description)",
         "arguments-edit": "$t(generic.edit)",
         "executable": "$t(generic.executable)",
         "use-win32-conhost": "$t(generic.use)$t(generic.platforms.win32)「conhost.exe」",
-        "use-win32-conhost-description": "如果执行「conhost.exe」没有创建视窗，请$t(generic.disable)。不保证这会起作用。"
+        "use-win32-conhost-description": "如果执行「conhost.exe」没有创建窗口，请$t(generic.disable)。不保证此选项有效。"
       },
       "name": "$t(generic.name)",
       "platform": "$t(generic.platforms.{{type}})",
       "platform-description-": "",
-      "platform-description-current": "目前$t(generic.platform)",
+      "platform-description-current": "当前$t(generic.platform)",
       "preset": "$t(generic.preset)",
-      "preset-placeholder": "($t(generic.custom))",
+      "preset-placeholder": "（$t(generic.custom)）",
       "reset": "$t(generic.reset)",
       "restore-history": "$t(generic.restore)$t(generic.history)",
-      "restore-history-description-HTML": "如果$t(generic.enable)，$t(generic.history)$t(generic.save)于<code>.obsidian/workspace.json</code>。",
+      "restore-history-description-HTML": "如果$t(generic.enable)，$t(generic.history)将会储存于<code>.obsidian/workspace.json</code>。",
       "success-exit-codes": "成功$t(generic.exit)代码",
       "success-exit-codes-description": "$t(generic.list-description)",
       "success-exit-codes-edit": "$t(generic.edit)",
@@ -84,9 +84,9 @@
         "profile-name-incompatible": "（$t(generic.incompatible)）$t(components.terminal.edit-modal.profile-name-)",
         "profile-placeholder": "$t(components.profile.preset-placeholder)",
         "reset": "$t(generic.reset)",
-        "root-directory": "$t(generic.root-directory)",
+        "root-directory": "根目录",
         "title": "$t(generic.edit)$t(generic.terminal)",
-        "working-directory": "$t(generic.working-directory)",
+        "working-directory": "工作目录",
         "working-directory-placeholder": "（$t(generic.undefined)）"
       },
       "menus": {
@@ -95,7 +95,7 @@
         "edit": "$t(generic.edit)",
         "find": "$t(generic.find)",
         "restart": "$t(generic.restart)",
-        "save-as-HTML": "$t(generic.save)为$t(generic.file-extensions.HTML)"
+        "save-as-HTML": "另存为$t(generic.file-extensions.HTML)"
       },
       "name": {
         "profile-type": "$t(generic.profile-types.{{type}})"
@@ -132,11 +132,13 @@
     "check": "检查",
     "clear": "清除",
     "close": "关闭",
+    "command": "命令",
     "compatible": "兼容",
     "context-menu": "右键菜单",
     "copy": "复制",
-    "current-directory": "目前$t(generic.directory)",
+    "current-directory": "当前$t(generic.directory)",
     "custom": "自定义",
+    "data": "数据",
     "default": "默认",
     "directory": "目录",
     "disable": "禁用",
@@ -144,9 +146,10 @@
     "documentations": {
       "changelog": "更新日志",
       "donate": "$t(generic.donate)",
-      "readme": "readme"
+      "readme": "说明文件"
     },
     "donate": "捐赠",
+    "edit": "编辑",
     "enable": "启用",
     "executable": "可执行文件",
     "exist": "存在",
@@ -154,6 +157,7 @@
     "file-extensions": {
       "HTML": "HTML"
     },
+    "find": "查找",
     "focus": "聚焦",
     "follow": "跟随",
     "font": "字体",
@@ -162,7 +166,10 @@
     "incompatible": "不$t(generic.compatible)",
     "instance": "实例",
     "invalid": "无效",
+    "list": "列表",
+    "list-description": "每行输入一项。",
     "name": "名称",
+    "open": "打开",
     "option": "选项",
     "pin": "锁定",
     "platform": "平台",
@@ -190,6 +197,7 @@
       "dom": "DOM",
       "webgl": "WebGL"
     },
+    "reset": "重置",
     "restart": "重启",
     "restore": "还原",
     "root-directory": "根$t(generic.directory)",
@@ -210,6 +218,7 @@
     "undefine": "取消定义",
     "undefined": "未定义",
     "unfocus": "取消聚焦",
+    "use": "使用",
     "window": "窗口",
     "working-directory": "工作$t(generic.directory)"
   },
@@ -260,11 +269,11 @@
     "open-terminal": "$t(generic.open)$t(generic.terminal)"
   },
   "settings": {
-    "add-to-command": "加入至$t(generic.command)",
-    "add-to-context-menu": "加入至$t(generic.context-menu)",
+    "add-to-command": "添加到$t(generic.command)",
+    "add-to-context-menu": "添加到$t(generic.context-menu)",
     "advanced": "高级",
-    "create-instance-near-existing-ones": "在$t(generic.exist)$t(generic.instance)附近创建$t(generic.instance)",
-    "create-instance-near-existing-ones-description": "如果为$t(generic.true)，则在$t(generic.instance)$t(generic.exist)时覆盖「$t(settings.new-instance-behavior)」。",
+    "create-instance-near-existing-ones": "在已有$t(generic.instance)附近创建新$t(generic.instance)",
+    "create-instance-near-existing-ones-description": "如果为$t(generic.true)，则当$t(generic.instance)存在时覆盖「$t(settings.new-instance-behavior)」。",
     "documentation": "$t(generic.documentation)",
     "documentations": {
       "changelog": "$t(generic.documentations.changelog)",
@@ -273,39 +282,39 @@
     },
     "expose-internal-modules": "显示内部模块",
     "expose-internal-modules-description-HTML": "<code>obsidian</code>、<code>@codemirror/*</code>、<code>@lezer/*</code>……",
-    "focus-on-new-instance": "$t(generic.focus)新$t(generic.instance)",
+    "focus-on-new-instance": "聚焦新$t(generic.instance)",
     "hide-status-bar": "隐藏$t(generic.status-bar)",
     "hide-status-bar-options": {
       "always": "总是",
-      "focused": "当$t(generic.focus)$t(generic.terminal)时",
+      "focused": "当$t(generic.terminal)聚焦时",
       "never": "从不",
-      "running": "当执行$t(generic.terminal)时"
+      "running": "当$t(generic.terminal)运行时"
     },
-    "instancing": "$t(generic.instance)",
-    "intercept-logging": "拦截记录",
+    "instancing": "实例化",
+    "intercept-logging": "拦截日志",
     "interface": "界面",
-    "macOS-option-key-passthrough": "macOS：Option键穿透",
-    "macOS-option-key-passthrough-description": "允许Option+键组合传递到$t(generic.terminal)以输入特殊字符（例如，斯堪的纳维亚/德语键盘上的@）。",
-    "new-instance-behavior": "新$t(generic.instance)$t(generic.behavior)",
+    "macOS-option-key-passthrough": "macOS：Option 键穿透",
+    "macOS-option-key-passthrough-description": "允许 Option+键组合传递到$t(generic.terminal)以输入特殊字符（例如，在斯堪的纳维亚/德语键盘上输入 @）。",
+    "new-instance-behavior": "新$t(generic.instance)行为",
     "new-instance-behaviors": {
-      "newHorizontalSplit": "新水平$t(generic.split)",
-      "newLeftSplit": "新左侧$t(generic.split)",
-      "newLeftTab": "新左侧$t(generic.tab)",
-      "newRightSplit": "新右侧$t(generic.split)",
-      "newRightTab": "新右侧$t(generic.tab)",
-      "newTab": "新$t(generic.tab)",
-      "newVerticalSplit": "新垂直$t(generic.split)",
-      "newWindow": "新$t(generic.window)",
-      "replaceTab": "替换$t(generic.tab)"
+      "newHorizontalSplit": "新水平分屏",
+      "newLeftSplit": "新左侧分屏",
+      "newLeftTab": "新左侧标签页",
+      "newRightSplit": "新右侧分屏",
+      "newRightTab": "新右侧标签页",
+      "newTab": "新标签页",
+      "newVerticalSplit": "新垂直分屏",
+      "newWindow": "新窗口",
+      "replaceTab": "替换标签页"
     },
-    "open-changelog-on-update": "$t(generic.open)$t(generic.documentations.changelog)更新中",
-    "pin-new-instance": "$t(generic.pin)新$t(generic.instance)",
+    "open-changelog-on-update": "更新时打开$t(generic.documentations.changelog)",
+    "pin-new-instance": "固定新$t(generic.instance)",
     "preferred-renderer": "首选$t(generic.renderer)",
     "preferred-renderer-options": "$t(generic.renderers.{{type}})",
     "profile-list": {
-      "description": "$t(generic.list)中第一个$t(generic.compatible)的$t(generic.profile)是其$t(generic.terminal)$t(generic.type)的$t(generic.default)。"
+      "description": "$t(generic.list)中第一个兼容的$t(generic.profile)是其$t(generic.terminal)$t(generic.type)的默认值。"
     },
-    "profiles": "$t(generic.profile)",
+    "profiles": "配置列表",
     "profiles-description": "$t(generic.list-description)",
     "profiles-edit": "$t(generic.edit)",
     "default-profile": "默认$t(generic.profile)",
